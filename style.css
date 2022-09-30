@@ -1,0 +1,210 @@
+html {
+  box-sizing: border-box;
+}
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  max-height: 1024px;
+  font-family: 'Lora', serif;
+}
+
+/* font-family: 'Lora', serif; regular 400, regular italic 400, bold 700, bold 700 italic */
+
+.page_home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+} 
+
+.text_uvod {
+  background-color: #292929;
+  background-image: url(images/les.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center; 
+}
+
+.text_aboutme {
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 400;
+  color: white;
+  margin: 180px 130px 0 130px;
+  padding: 0;
+}
+
+.rightside {
+  background-color: #292929;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 150px 160px 60px 160px;
+  justify-items: center;
+}
+
+.menu_item {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.header {
+  margin-bottom: 400px;
+}
+
+.name {
+  font-size: 36px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.jobs {
+  font-size: 14px;
+  color: white;
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer {
+  align-self: end;
+}
+
+.icon_menu {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  margin: 0 150px;
+}
+
+.fb_icon,
+.ig_icon,
+.be_icon {
+  display: inline-block;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  margin: 0 20px;
+  border-radius: 7px;
+}
+
+.e-mail {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 30px 0;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* CSS pro ILUSTRACE */
+
+.headerLine {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #292929;
+  padding: 25px 50px;
+  align-items: center;
+}
+
+.menuLine {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+
+.menuLine_item {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.nameLine_texts {
+  text-align: right;
+  color: white;
+  margin-right: 20px;
+  line-height: 1,5;
+}
+
+.nameLine {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.jobsLine {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.projectLeft {
+  display: grid;
+  grid-template-columns: 400px auto;
+  margin: 120px 220px 60px 220px;
+  background-color: white;
+  height: 400px;
+  border-bottom: 2px solid lightgray;
+}
+
+.projectLeft_name {
+  justify-self: center;
+  align-self: center;
+}
+
+.projectLeft_picture {
+  background-image: url(ilustrace/alzbeta_pomoranska.jpg);
+  background-size: cover;
+}
+
+.projectRight {
+  display: grid;
+  grid-template-columns: auto 400px;
+  margin: 60px 220px;
+  background-color: white;
+  height: 400px;
+  border-bottom: 2px solid lightgray;
+}
+
+.projectRight_name {
+  justify-self: center;
+  align-self: center;
+}
+
+.projectRight_picture {
+  background-image: url(ilustrace/dudek_chocholaty.jpg);
+  background-size: cover;
+}
+
+.copyright_footer {
+  color: white;
+  background-color: #292929;
+  margin: 30px auto;
+  padding: 50px 0;
+  text-align: center;
+  line-height: 2;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="menu.css">
+
+    <title>Menu</title>
+</head>
+<body>
+    <h1 class="nadpis">Jak si tvořím menu</h1>
+
+    <p class="text">Menu píšeme jako klasický seznam.</p>
+
+    <ul class="seznam">
+        <li>ilustrace</li>
+        <li>fotografie</li>
+        <li>grafika</li>
+    </ul>
+
+    <p class="text">Náš seznam má jedinečný název třídy, abychom stylovali jenom tento konkrétní seznam.</p>
+
+    <p class="text">Když nastavuji pozadí u celého seznamu, na třídu u značky ul, je pozadí i v oblasti paddingu, ale ne marginu, ten je mimo objekt.</p>
+
+    <ul class="seznam">
+        <li class="seznam_item">ilustrace</li>
+        <li class="seznam_item">fotografie</li>
+        <li class="seznam_item">grafika</li>
+    </ul>
+
+    <p class="text">Když si nastavíme pozadí u položek li (přes třídu) má přednost před barvou pozadí u ul, ikdyž je v css napsána výše.</p>
+
+    <p class="text">U seznamu bychom na začátku měli vynulovat margin a padding, protože značku ul ji má předdefinovanou. Já už mám aktuálně nastavený padding: 20px 0 a margin-bottom: 10px. Z toho důvodu, aby prvky na stránce byli uspořádány přehledněji.</p>
+    
+    <ul class="seznam_02">
+        <li class="seznam_item_02">ilustrace</li>
+        <li class="seznam_item_02">fotografie</li>
+        <li class="seznam_item_02">grafika</li>
+    </ul>
+
+    <p class="text">Většinou chceme, aby menu mělo námi zvolený vzhled a nechceme odrážky na začátku, to nastavíme přes třídu u prvků li v CSS: list-style: none. U položek seznamu výše jsem nastavila line-height na 1.5, zvětší to řádkování pro lepší čtení (= výška písma × 1.5).</p>
+
+    <p class="text">Náš seznam má být menu, to má většinou položky uspořádané na řádku. Značka li je defaultně nastavená jako blokový prvek → display:block, tedy zabírá celou šířku řádku, na kterém je napsaná. Aby byli prvky na řádku nastavíme vlastnost display: inline-block, flex nebo grid. Všechny tyto uspořádání nám prvky defaultně nastaví na řádek a zarovnají doleva, jejich vzhled a uspořádání je možné měnit přes jejich další vlastnosti.</p>
+
+    <hr class="line">
+
+    <div class="align_items">
+        <h4 class="small_nadpis_inlineb">Display: inline-block;</h4>
+
+        <p class="text">Vlastnost inline-block automaticky zarovná položky vedle sebe, stávají se tzv. řádkově-blokové. Díky tomu zabírají pouze nutný prostor, který se řídí jejich obsahem.</p>
+        
+        <ul class="seznam_inlineb">
+            <li class="seznam_item_inlineb">ilustrace</li>
+            <li class="seznam_item_inlineb">fotografie</li>
+            <li class="seznam_item_inlineb">grafika</li>
+        </ul>
+
+        <p class="text">V případě řádkově-blokového prvku ho nelze "hezky" zarovnat na střed jeho buňky/prostoru, žádný vlastně nemá. Vlastnost inline-block pouze uspořádá prvky do řádku. Můžeme tedy prvkům nastavit padding a margin, aby se změnilo jejich umístění. Já nastavila padding-right: 20px a margin-left: 20px.</p>
+    </div>
+
+    <div class="align_items">
+        <h4 class="small_nadpis_flex">Display: flex;</h4>
+
+        <p class="text">Flexbox automaticky seřadí prvky vedle sebe na nejmenší možnou šířku, pokud nemám na jendotlivých položkách menu (li) nastavený padding nebo margin, prvky se na sebe nalepí. <br>
+        Nesmíme zapomínat, že u fleboxu bysme měli nastavit vlastnosti (zapisují se do CSS) flex-grow (položka se může roztahovat), flex-shrink (položka se může smrskávat) a flex-basis (ideální šířka prvku). Můžeme je zapisovat každou zvlášť nebo ve zkráceném zápisu flex: 0 1 auto; flex: grow shrink basis; toto je defaultní nastavení. Výhodou flexboxu je, že můžeme měnit pořadí prvků (vlastnost order).</p>
+
+        <ul class="seznam_flex">
+            <li class="seznam_item_flex">ilustrace</li>
+            <li class="seznam_item_flex">fotografie</li>
+            <li class="seznam_item_flex">grafika</li>
+        </ul>
+
+        <p class="text">Tady jsem u položek menu nastavili flex: 1 1 auto (rostou, smrskávají se a mají automatickou šířku).</p>
+
+        <ul class="seznam_flex">
+            <li class="seznam_item_flex02">ilustrace</li>
+            <li class="seznam_item_flex02">fotografie</li>
+            <li class="seznam_item_flex02">grafika</li>
+        </ul>
+
+        <p class="text">Tady jsme u položek menu nastavili flex: 1 1 auto (rostou, smrskávají se a mají automatickou šířku). Ve tříd u ul jsme nastavili uspořádaní položek v rámci flexboxu → justify-content: space-around. Položky se zarovnali v rámci svého prostoru na střed, protože nemáme nastavený žádný padding pracujeme pouze s výškou řádku. Existuje více možností jak položky ve flexboxu zarovnat.</p>
+
+        <ul class="seznam_flex_03">
+            <li class="seznam_item_flex03">ilustrace</li>
+            <li class="seznam_item_flex03">fotografie</li>
+            <li class="seznam_item_flex03">grafika</li>
+        </ul>
+
+    </div>
+
+    <div class="align_items">
+        
+        <h4 class="small_nadpis_grid">Display: grid;</h4>    
+        
+        <p class="text">Grid automaticky seřadí prvky vedle sebe na řádek, na kontejneru je nutné, u nás ul, nastavit počet sloupců → grid-template-colums, tady nenastavujeme počet řádků. Grid-template-colums: repeat(3, 1fr) = máme 3 sloupce o šířce 1 fraction (jedné části), můžeme taky zapsat jako grid-template-colums: 1fr 1fr 1fr.</p>
+
+        <ul class="seznam_grid">
+            <li class="seznam_item_grid">ilustrace</li>
+            <li class="seznam_item_grid">fotografie</li>
+            <li class="seznam_item_grid">grafika</li>
+        </ul>
+
+        <p class="text">V případě tohoto menu jsem na kontejner (ul) nastavila vlastnost justify-items, která zarovnává všechny položky na střed jejich prostoru.</p>
+
+        <ul class="seznam_grid_02">
+            <li class="seznam_item_grid_02">ilustrace</li>
+            <li class="seznam_item_grid_02">fotografie</li>
+            <li class="seznam_item_grid_02">grafika</li>
+        </ul>
+
+        <p>Já chci svoje menu zarovnávat pomocí gridu, pracuje se mi s ním nejlépe.</p>
+    </div>
+
+    <div class="odkazy">
+        <h2 class="odkazy_nadpis">Přidání odkazů</h2>
+        <p class="odkazy_text">Menu funguje tak, že jde o odkazy na další stránky nebo prvky na stránce. Proto musíme na jednotlivé položky přidat značku a s atributem href, která nám to umožní.</p>
+        
+        <div>    
+            <ul class="menu">
+                <li>
+                    <a class="menu_item" href="ilustrace.html">ilustrace</a>
+                </li>
+                <li>
+                    <a class="menu_item" href="fotografie.html">fotografie</a>
+                </li>
+                <li>
+                    <a class="menu_item" href="grafika.html">grafika</a>
+                </li>
+            </ul>
+        </div>
+      
+    </div>
+
+   
+
+</body>
+</html>

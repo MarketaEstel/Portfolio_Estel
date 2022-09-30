@@ -1,0 +1,188 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    margin: 50px 100px;
+}
+
+.nadpis {
+    padding-bottom: 30px;
+}
+
+.text {
+    padding: 10px 0;
+    line-height: 1.4;
+}
+
+.line {
+    margin: 20px 0;
+}
+
+.align_items {
+    margin-bottom: 80px;
+}
+
+.seznam,
+.seznam_02 {
+    background-color: bisque;
+    padding: 20px 0;
+    margin-bottom: 10px;
+}
+
+.seznam_item {
+    background-color: aquamarine;
+    margin: 0;
+    padding: 0;
+} 
+
+.seznam_item_02 {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.small_nadpis_inlineb,
+.small_nadpis_flex,
+.small_nadpis_grid {
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.small_nadpis_inlineb {
+    background-color: lightgrey;
+}
+
+.small_nadpis_flex {
+    background-color: lightpink;
+}
+
+.small_nadpis_grid {
+    background-color: lightcyan;
+}
+
+.seznam_inlineb {
+    background-color: lightgrey;
+    margin-bottom: 20px;
+}
+
+.seznam_item_inlineb {
+    display: inline-block;
+    list-style: none;
+    line-height: 1.5;
+    padding-right: 20px;
+    margin-left: 20px;
+}
+
+.seznam_flex {
+    display: flex;
+    background-color: lightpink;
+    margin-bottom: 20px;
+}
+
+.seznam_flex_03 {
+    display: flex;
+    background-color: lightpink;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.seznam_item_flex {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.seznam_item_flex02 {
+    list-style: none;
+    line-height: 1.5;
+    flex: 1 1 auto;
+}
+
+.seznam_item_flex03 {
+    list-style: none;
+    line-height: 1.5;
+    flex: 0 1 auto;
+    
+}
+.seznam_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: lightcyan;
+    margin-bottom: 20px;
+}
+
+.seznam_grid_02 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    background-color: lightcyan;
+    margin-bottom: 20px;
+}
+
+.seznam_item_grid {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.seznam_item_grid_02 {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.odkazy {
+    background-color: #292929;
+    padding: 20px;
+}
+
+.odkazy_nadpis {
+    color: aliceblue;
+    margin-bottom: 15px;
+}
+
+.odkazy_text {
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+.seznam_odkazy {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.seznam_item_ {
+    list-style: none;
+    line-height: 1.5;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.seznam_item_odkaz {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.menu {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin: 50px 200px;
+}
+
+.menu_item {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
